@@ -26,4 +26,5 @@ public class InterestVisitor implements Visitor<Double> {
 
     @Override
     public Double visitDeposit(Deposit deposit) { return deposit.amount * deposit.rate; }
+    @Override public Double visitCryptoWallet(CryptoWallet cw) { return 0.0; }
 }

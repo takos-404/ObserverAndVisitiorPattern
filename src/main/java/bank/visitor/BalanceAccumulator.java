@@ -30,4 +30,5 @@ public class BalanceAccumulator implements Visitor<Double> {
 
     @Override
     public Double visitDeposit(Deposit deposit) { return deposit.amount; }
+    @Override public Double visitCryptoWallet(CryptoWallet cw) { return cw.btcBalance * 90000.0; }
 }

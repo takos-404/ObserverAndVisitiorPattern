@@ -26,4 +26,7 @@ public class XmlExportVisitor implements Visitor<String> {
 
     @Override
     public String visitDeposit(Deposit deposit) { return "<deposit amount=\"" + deposit.amount + "\" rate=\"" + deposit.rate + "\"/>"; }
+    @Override public String visitCryptoWallet(CryptoWallet cw) {
+        return "<crypto btc=\"" + cw.btcBalance + "\"/>";
+    }
 }

@@ -32,4 +32,7 @@ public class JsonExportVisitor implements Visitor<String> {
 
     @Override
     public String visitDeposit(Deposit deposit) { return "{\"type\":\"deposit\", \"amount\": " + deposit.amount + ", \"rate\": " + deposit.rate + "}"; }
+    @Override public String visitCryptoWallet(CryptoWallet cw) {
+        return "{\"type\":\"crypto\", \"btc\": " + cw.btcBalance + "}";
+    }
 }

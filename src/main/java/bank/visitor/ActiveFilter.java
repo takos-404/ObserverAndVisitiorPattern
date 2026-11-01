@@ -37,4 +37,8 @@ public class ActiveFilter implements Visitor<List<Element>> {
     public List<Element> visitDeposit(Deposit deposit) {
         return deposit.amount > 0 ? List.of(deposit) : List.of();
     }
+    @Override public java.util.List<Element> visitCryptoWallet(CryptoWallet cw) {
+        return cw.btcBalance > 0 ? java.util.List.of(cw) : java.util.List.of();
+    }
+
 }

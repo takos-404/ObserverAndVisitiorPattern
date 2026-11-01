@@ -7,4 +7,5 @@ public interface Visitor<R> {
     R visitCard(Card card);
     R visitLoan(Loan loan);
     R visitDeposit(Deposit deposit);
+    R visitCryptoWallet(CryptoWallet cryptoWallet);
 }
